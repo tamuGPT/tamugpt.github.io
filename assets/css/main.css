@@ -87,6 +87,25 @@ a:hover {
     font-weight: 600;
 }
 
+.report-item {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.video-container {
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 80%;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container video {
+    width: 80%;
+    height: 100%;
+}
+
 @media only screen and (max-width: 800px) {
     .container {
         max-width: 75vw;
