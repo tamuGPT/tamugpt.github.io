@@ -23,7 +23,7 @@
         <div class="team-member-container">
             <div class="team-member">
                 <a href="https://www.linkedin.com/in/aarthi-vasudevan/" target="_blank">
-                    <img src="https://fastly.picsum.photos/id/433/200/200.jpg?hmac=dBn6DDBngOA94Grm3jfIJNDtv08GorUvB0zMeAw0Jfs" alt="Aarthi">
+                    <img src="./assets/images/aarthi.jpg" alt="Aarthi">
                 </a>
             </div>
             <a href="https://www.linkedin.com/in/aarthi-vasudevan/" target="_blank">
@@ -68,12 +68,76 @@
 
     <div class="report-item">
         <h2>Overview</h2>
-        <p>tamuGPT is a sophisticated chatbot from Texas A&M, implemented with Retrieval Augmented Generation (RAG) architecture.</p>
+        <p>tamuGPT is a sophisticated chatbot from Texas A&M, implemented with Retrieval Augmented Generation (RAG) architecture. A workflow of the model is provided below.</p>
+        
+        <div class="overview">
+            <img src="./assets/images/architecture.png" alt="Architecture Design">
+            <p style="text-align: center;"><a href="./assets/images/architecture.png" target="_blank">Architecture Design</a></p>
+            <h3>Taking the user input:</h3>
+            <ol>
+                <li><strong>User Query:</strong> The process begins with capturing the user's query.</li>
+            </ol>
+
+            <h3><strong>Leveraging Google Search:</strong></h3>
+            <ol start="2">
+                <li><strong>Information Retrieval with Google Search API:</strong> tamuGPT utilizes the Google Search API to retrieve a set of potentially relevant documents (e.g., top 10 links) that address the user's query.</li>
+            </ol>
+
+            <h3><strong>Data Preparation:</strong></h3>
+            <ol start="3">
+                <li><strong>Preprocessing and Cleaning:</strong> The retrieved content undergoes pre-processing to remove irrelevant information such as headers, footers, and HTML tags.</li>
+            </ol>
+
+            <h3><strong>Content Analysis with GPT-3.5:</strong></h3>
+            <ol start="4">
+                <li><strong>Summarization:</strong> The pre-processed content is then passed to GPT 3.5 model to summarize the relevant content.</li>
+                <li><strong>Reranking:</strong> The summarized content is re-ranked by GPT 3.5 model.</li>
+            </ol>
+
+            <h3><strong>Response Generation:</strong></h3>
+            <ol start="6">
+                <li><strong>Response:</strong> Based on the user's query, the top k (e.g., top 7) ranked summaries, and the insights gained from accessing the original retrieved documents (through RAG), GPT-3.5 generates the final response.</li>
+                <li><strong>Source Attribution:</strong> The final response includes information about the sources used (URLs) allowing users to access the original content.</li>
+            </ol>
+
+            <p>Depending on the requirements, GPT 3.5 is invoked with different templates to perform the ranking, summarization and answer the query based on the context.</p>
+        </div>
     </div>
 
     <div class="report-item">
         <h2>Additional Information</h2>
-        <p>[Include any additional information about your project beyond what is covered in the video. This could include key features, technologies used, challenges faced, and any future plans or improvements.]</p>
+        <div class="key-features">   
+            <h3><strong>⭐️ Key Features:</strong></h3>  
+            <ul> 
+                <li> <strong>Up-to-Date Information:</strong> tamuGPT prioritizes fresh and relevant sources through Google Search, ensuring to get the latest insights</li>
+                <li> <strong>Reliability:</strong> Integrating multiple knowledge sources and leveraging Google Search, tamuGPT provides trustworthy and dependable information</li>
+                <li> <strong>Comprehensive Understanding:</strong> tamuGPT utilizes Retriever-Augmented Generation (RAG) to access the full context of retrieved documents, leading to more insightful responses</li>
+            </ul>     
+        </div>
+        <div class="technologies">   
+            <h3><strong>🤖 Technologies:</strong></h3>  
+            <ul> 
+                <li> <strong>Retriever-Augmented Generation (RAG):</strong> Relevant context is provided to GPT 3.5 model allowing it to access the retrieved documents for better insights</li>
+                <li> <strong>Google Search Integration:</strong> LLM is integrated with Google Search API to retrieve the top potentially relevant documents</li>
+                <li> <strong>Summarization and Reranking:</strong> Summarization and Re-ranking is performed to organize the data chunks and obtain the context for the response generation</li>
+            </ul>     
+        </div>
+        <div class="challenges">   
+            <h3><strong>💪 Challenges:</strong></h3>  
+            <ul> 
+                <li> <strong>Choice of LLM:</strong> Choosing the ideal LLM for the summarization, re-ranking and context-integration tasks </li>
+                <li> <strong>Search Speed:</strong> Striking a balance between accuracy and response time</li>
+                <li> <strong>Computation cost:</strong> Require additional computational resources to design a custom or hybrid LLM</li>
+            </ul>     
+        </div>
+        <div class="future-scope">   
+            <h3><strong> 🚀 Future Scope:</strong></h3>  
+            <ul> 
+                <li> <strong>Source Mapping:</strong> In case of multiple answers, the current model presents a response with generalized source summary. This can be refined to perform a 1-to-1 mapping between multiple answers and the corresponding sources</li>
+                <li> <strong>Expanding retrieval sources:</strong> Additional sources like databases, specialized archives or domain-specific repositories could be integrated to provide richer information for RAG to leverage</li>
+                <li> <strong>Adaptive Summarization:</strong> RAG can be enhanced to generate summaries tailored to specific user queries</li>
+            </ul>     
+        </div>
     </div>
 
     <div class="report-item">

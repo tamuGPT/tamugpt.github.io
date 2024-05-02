@@ -23,6 +23,10 @@ h1, h2, p {
     margin-bottom: 20px;
 }
 
+h1, h2 {
+    color: #00807F;
+}
+
 a {
     color: #007bff;
     text-decoration: none;
@@ -90,6 +94,9 @@ a:hover {
 .report-item {
     margin-top: 3em;
     margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .video-container {
@@ -137,4 +144,19 @@ a:hover {
         max-width: 80vw;
         padding: 20px;
     }
+}
+
+/* Styles for .overview container */
+.overview, .key-features, .technologies, .challenges, .future-scope {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.overview, .key-features, .technologies, .challenges, .future-scope ol, ul li {
+    margin-bottom: 10px; 
+}
+
+.overview img{
+    width: 100%
 }
