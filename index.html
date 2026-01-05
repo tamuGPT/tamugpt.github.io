@@ -73,38 +73,40 @@
         <div class="overview">
             <img src="./assets/images/architecture.png"  style="width: 100%" alt="Architecture Design">
             <p style="text-align: center;"><a href="./assets/images/architecture.png" target="_blank">Architecture Design</a></p>
-            <h3>Taking the user input:</h3>
-            <ol>
-                <li><strong>User Query:</strong> The process begins with capturing the user's query.</li>
-            </ol>
+            <!--<div>
+                <h3>Taking the user input:</h3>
+                <ol>
+                    <li><strong>User Query:</strong> The process begins with capturing the user's query.</li>
+                </ol>
 
-            <h3><strong>Leveraging Google Search:</strong></h3>
-            <ol start="2">
-                <li><strong>Information Retrieval with Google Search API:</strong> tamuGPT utilizes the Google Search API to retrieve a set of potentially relevant documents (e.g., top 10 links) that address the user's query.</li>
-            </ol>
+                <h3><strong>Leveraging Google Search:</strong></h3>
+                <ol start="2">
+                    <li><strong>Information Retrieval with Google Search API:</strong> tamuGPT utilizes the Google Search API to retrieve a set of potentially relevant documents (e.g., top 10 links) that address the user's query.</li>
+                </ol>
 
-            <h3><strong>Data Preparation:</strong></h3>
-            <ol start="3">
-                <li><strong>Preprocessing and Cleaning:</strong> The retrieved content undergoes pre-processing to remove irrelevant information such as headers, footers, and HTML tags.</li>
-            </ol>
+                <h3><strong>Data Preparation:</strong></h3>
+                <ol start="3">
+                    <li><strong>Preprocessing and Cleaning:</strong> The retrieved content undergoes pre-processing to remove irrelevant information such as headers, footers, and HTML tags.</li>
+                </ol>
 
-            <h3><strong>Content Analysis with GPT-3.5:</strong></h3>
-            <ol start="4">
-                <li><strong>Summarization:</strong> The pre-processed content is then passed to GPT 3.5 model to summarize the relevant content.</li>
-                <li><strong>Reranking:</strong> The summarized content is re-ranked by GPT 3.5 model.</li>
-            </ol>
+                <h3><strong>Content Analysis with GPT-3.5:</strong></h3>
+                <ol start="4">
+                    <li><strong>Summarization:</strong> The pre-processed content is then passed to GPT 3.5 model to summarize the relevant content.</li>
+                    <li><strong>Reranking:</strong> The summarized content is re-ranked by GPT 3.5 model.</li>
+                </ol>
 
-            <h3><strong>Response Generation:</strong></h3>
-            <ol start="6">
-                <li><strong>Response:</strong> Based on the user's query, the top k (e.g., top 7) ranked summaries, and the insights gained from accessing the original retrieved documents (through RAG), GPT-3.5 generates the final response.</li>
-                <li><strong>Source Attribution:</strong> The final response includes information about the sources used (URLs) allowing users to access the original content.</li>
-            </ol>
+                <h3><strong>Response Generation:</strong></h3>
+                <ol start="6">
+                    <li><strong>Response:</strong> Based on the user's query, the top k (e.g., top 7) ranked summaries, and the insights gained from accessing the original retrieved documents (through RAG), GPT-3.5 generates the final response.</li>
+                    <li><strong>Source Attribution:</strong> The final response includes information about the sources used (URLs) allowing users to access the original content.</li>
+                </ol>
 
-            <p>Depending on the requirements, GPT 3.5 is invoked with different templates to perform the ranking, summarization and answer the query based on the context.</p>
+                <p>Depending on the requirements, GPT 3.5 is invoked with different templates to perform the ranking, summarization and answer the query based on the context.</p>
+            </div>-->
         </div>
     </div>
 
-    <div class="report-item">
+    <!--<div class="report-item">
         <h2>Additional Information</h2>
         <div class="technologies">   
             <h3><strong>🤖 Technologies:</strong></h3>  
@@ -129,7 +131,7 @@
                 <li> <strong>Expanding retrieval sources:</strong> Additional sources like databases, specialized archives or domain-specific repositories could be integrated to provide richer information for RAG to leverage</li>
             </ul>     
         </div>
-    </div>
+    </div>-->
 
     <div class="report-item">
         <h2>GitHub Repository</h2>
